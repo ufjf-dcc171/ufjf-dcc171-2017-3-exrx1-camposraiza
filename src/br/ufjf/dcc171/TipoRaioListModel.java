@@ -5,24 +5,24 @@ import java.util.List;
 import javax.swing.ListModel;
 import javax.swing.event.ListDataListener;
 
-public class TurmasListModel implements ListModel<Turma> {
+public class TipoRaioListModel implements ListModel<TipoRaio> {
 
-    private final List<Turma> turmas;
+    private final List<TipoRaio> nome;
     private final List<ListDataListener> dataListeners;
 
-    public TurmasListModel(List<Turma> turmas) {
-        this.turmas = turmas;
+    public TipoRaioListModel(List<TipoRaio> nome) {
+        this.nome = nome;
         this.dataListeners =  new ArrayList<>();
     }
 
     @Override
     public int getSize() {
-        return turmas.size();
+        return nome.size();
     }
 
     @Override
-    public Turma getElementAt(int index) {
-        return turmas.get(index);
+    public TipoRaio getElementAt(int index) {
+        return nome.get(index);
     }
 
     @Override
